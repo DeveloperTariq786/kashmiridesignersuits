@@ -13,6 +13,7 @@ import igFeed1 from "../src/assets/images/ig_feed_1_1784266453047.jpg";
 import igFeed2 from "../src/assets/images/ig_feed_2_1784266466913.jpg";
 import igFeed3 from "../src/assets/images/ig_feed_3_1784266480853.jpg";
 import igFeed4 from "../src/assets/images/ig_feed_4_1784266491783.jpg";
+import campaignLookbook from "../src/assets/images/campaign_lookbook_1784267083945.jpg";
 
 export default function Page() {
   const whatsappNumber = "919086000130";
@@ -284,6 +285,83 @@ export default function Page() {
         </div>
       </section>
 
+      {/* The Artisanal Process */}
+      <section className="py-24 md:py-32 px-6 max-w-7xl mx-auto border-b border-stone-200">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+          <div className="flex-1 w-full">
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1 }}
+              className="relative aspect-[4/5] w-full bg-stone-200 overflow-hidden"
+            >
+              <Image
+                src={igFeed1}
+                alt="Intricate Kashmiri Embroidery"
+                fill
+                className="object-cover"
+                referrerPolicy="no-referrer"
+              />
+            </motion.div>
+          </div>
+          <div className="flex-1">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true }}
+              variants={fadeUp}
+            >
+              <h2 className="font-serif text-4xl md:text-5xl font-bold text-stone-900 mb-6">The Art of Detail</h2>
+              <p className="text-stone-500 text-lg leading-relaxed mb-8">
+                Every thread tells a story. From the delicate needlework of <span className="text-stone-900 font-medium">Sozni</span> to the regal metallic allure of <span className="text-stone-900 font-medium">Tilla</span>, and the bold, colorful strokes of <span className="text-stone-900 font-medium">Aari</span>—our pieces celebrate the centuries-old legacy of Kashmiri artisans.
+              </p>
+              <ul className="space-y-6">
+                <li className="flex items-start gap-4">
+                  <span className="text-stone-300 font-serif text-2xl font-bold">01</span>
+                  <div>
+                    <h4 className="text-stone-900 font-bold uppercase tracking-widest text-xs mb-1">Authentic Craft</h4>
+                    <p className="text-stone-500 text-sm">Handcrafted locally in Srinagar, ensuring traditional techniques remain untouched by fast fashion.</p>
+                  </div>
+                </li>
+                <li className="flex items-start gap-4">
+                  <span className="text-stone-300 font-serif text-2xl font-bold">02</span>
+                  <div>
+                    <h4 className="text-stone-900 font-bold uppercase tracking-widest text-xs mb-1">Modern Silhouettes</h4>
+                    <p className="text-stone-500 text-sm">Heritage embroidery adapted onto clean, contemporary cuts suitable for any global setting.</p>
+                  </div>
+                </li>
+              </ul>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* The Lookbook / Campaign */}
+      <section className="relative h-[70vh] md:h-[80vh] w-full overflow-hidden flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src={campaignLookbook}
+            alt="Season Campaign"
+            fill
+            className="object-cover"
+            referrerPolicy="no-referrer"
+          />
+          <div className="absolute inset-0 bg-stone-900/30" />
+        </div>
+        
+        <motion.div 
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 1 }}
+          className="relative z-10 text-center px-6"
+        >
+          <span className="text-white tracking-[0.3em] uppercase text-xs font-bold mb-4 block drop-shadow-md">Autumn / Winter</span>
+          <h2 className="font-serif text-5xl md:text-7xl text-white font-bold leading-tight drop-shadow-lg">The Valley Edit</h2>
+        </motion.div>
+      </section>
+
       {/* Shop By Category */}
       <section className="py-24 md:py-32 px-6 max-w-7xl mx-auto">
         <motion.div 
@@ -451,6 +529,37 @@ export default function Page() {
               </a>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Newsletter */}
+      <section className="py-24 bg-stone-900 text-white border-t border-stone-800">
+        <div className="max-w-3xl mx-auto px-6 text-center">
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={fadeUp}
+          >
+            <h2 className="font-serif text-3xl md:text-5xl mb-4">The Inner Circle</h2>
+            <p className="text-stone-400 mb-8 max-w-lg mx-auto text-sm leading-relaxed">
+              Join our exclusive mailing list for early access to new drops, limited edition pieces, and behind-the-scenes stories from our artisans.
+            </p>
+            <form className="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto" onSubmit={(e) => e.preventDefault()}>
+              <input 
+                type="email" 
+                placeholder="Enter your email address" 
+                className="flex-1 bg-transparent border border-stone-700 text-white px-6 py-3 focus:outline-none focus:border-stone-400 transition-colors placeholder:text-stone-600"
+                required
+              />
+              <button 
+                type="submit" 
+                className="bg-white text-stone-900 px-8 py-3 text-sm font-semibold uppercase tracking-widest hover:bg-stone-200 transition-colors"
+              >
+                Subscribe
+              </button>
+            </form>
+          </motion.div>
         </div>
       </section>
 
