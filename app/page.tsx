@@ -9,6 +9,11 @@ import suitEmerald from "../src/assets/images/suit_emerald_1784266122169.jpg";
 import suitMaroon from "../src/assets/images/suit_maroon_1784266133228.jpg";
 import suitIvory from "../src/assets/images/suit_ivory_1784266144424.jpg";
 
+import igFeed1 from "../src/assets/images/ig_feed_1_1784266453047.jpg";
+import igFeed2 from "../src/assets/images/ig_feed_2_1784266466913.jpg";
+import igFeed3 from "../src/assets/images/ig_feed_3_1784266480853.jpg";
+import igFeed4 from "../src/assets/images/ig_feed_4_1784266491783.jpg";
+
 export default function Page() {
   const whatsappNumber = "919086000130";
   
@@ -44,48 +49,101 @@ export default function Page() {
       </nav>
 
       {/* Hero Section */}
-      <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0 bg-stone-200">
-          <Image
-            src={heroBanner}
-            alt="Kashmiri Designer Suits Campaign"
-            fill
-            priority
-            className="object-cover object-center md:object-top"
-            referrerPolicy="no-referrer"
-          />
-          <div className="absolute inset-0 bg-stone-900/40" />
-        </div>
+      <section className="relative min-h-screen w-full flex flex-col lg:flex-row pt-20 overflow-hidden bg-stone-50 border-b border-stone-200">
         
-        <div className="relative z-10 text-center px-6 max-w-4xl mx-auto mt-20">
-          <motion.h2 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-stone-200 tracking-[0.2em] uppercase text-sm mb-6"
+        {/* Decorative background text */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-1/2 -rotate-90 hidden 2xl:block text-stone-200 text-[12rem] font-serif font-bold opacity-30 whitespace-nowrap pointer-events-none z-0 select-none">
+          KASHMIRI
+        </div>
+
+        {/* Left Side: Typography */}
+        <div className="flex-1 flex flex-col justify-center px-6 md:px-16 lg:pl-24 lg:pr-8 py-16 lg:py-0 relative z-20">
+          <motion.div
+             initial={{ opacity: 0, y: 20 }}
+             animate={{ opacity: 1, y: 0 }}
+             transition={{ duration: 0.8, delay: 0.2 }}
+             className="flex items-center gap-4 mb-8"
           >
-            Style for every story
-          </motion.h2>
+            <div className="w-12 h-px bg-stone-900"></div>
+            <span className="text-stone-900 tracking-[0.3em] uppercase text-xs font-semibold">
+              Kashmiri Designer Suits
+            </span>
+          </motion.div>
+          
           <motion.h1 
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="font-serif text-5xl md:text-7xl lg:text-8xl text-white font-bold leading-tight mb-10"
+            className="font-serif text-6xl md:text-8xl lg:text-[6.5rem] xl:text-[8rem] text-stone-900 font-bold leading-[0.9] tracking-tight mb-8 relative z-20"
           >
-            The New Era of <br className="hidden md:block"/> Kashmiri Craft
+            The New<br />
+            Era Of<br />
+            <span className="italic font-light text-stone-500">Craft.</span>
           </motion.h1>
+          
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.6 }}
+            className="text-stone-500 max-w-sm mb-12 text-lg leading-relaxed"
+          >
+            Style for every story. Discover contemporary silhouettes featuring authentic Kashmiri hand-embroidery.
+          </motion.p>
+          
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 lg:gap-6"
           >
             <a 
               href="#collection" 
-              className="inline-flex items-center gap-3 bg-white text-stone-900 px-8 py-4 text-sm font-semibold tracking-wide uppercase hover:bg-stone-200 transition-colors"
+              className="inline-flex items-center justify-center gap-3 bg-stone-900 text-white px-8 py-4 text-sm font-semibold tracking-widest uppercase hover:bg-stone-800 transition-colors w-full sm:w-auto"
             >
-              Shop the Collection
-              <ArrowRight className="w-4 h-4" />
+              Explore Collection
             </a>
+            <a 
+              href={createWhatsAppLink("Hi! I would like to order a designer suit.")}
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-3 border border-stone-200 text-stone-900 px-8 py-4 text-sm font-semibold tracking-widest uppercase hover:border-stone-900 hover:bg-stone-100 transition-colors w-full sm:w-auto"
+            >
+              Custom Order
+            </a>
+          </motion.div>
+        </div>
+        
+        {/* Right Side: Imagery */}
+        <div className="flex-[1.2] relative h-[60vh] lg:h-auto w-full order-first lg:order-last flex items-center justify-center p-6 lg:p-12 lg:pr-24 z-10">
+          <motion.div 
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 1.5, ease: "easeOut" }}
+            className="relative w-full h-full min-h-[500px] max-h-[850px] bg-stone-200 overflow-hidden shadow-sm"
+          >
+            <Image
+              src={heroBanner}
+              alt="Kashmiri Designer Suits Campaign"
+              fill
+              priority
+              className="object-cover object-center"
+              referrerPolicy="no-referrer"
+            />
+          </motion.div>
+          
+          {/* Overlapping secondary image for editorial feel */}
+          <motion.div 
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1.2, delay: 0.8, ease: "easeOut" }}
+            className="absolute bottom-12 left-0 lg:-left-12 xl:-left-24 w-40 h-56 md:w-56 md:h-72 border-[8px] border-stone-50 bg-stone-200 overflow-hidden hidden sm:block shadow-xl z-30"
+          >
+             <Image
+              src={igFeed1}
+              alt="Embroidery Detail"
+              fill
+              className="object-cover object-center"
+              referrerPolicy="no-referrer"
+            />
           </motion.div>
         </div>
       </section>
@@ -354,21 +412,45 @@ export default function Page() {
         </div>
       </section>
 
-      {/* Social Proof */}
-      <section className="py-24 bg-stone-900 text-white text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <Instagram className="w-10 h-10 mx-auto mb-8 opacity-80" strokeWidth={1.5} />
-          <h2 className="font-serif text-3xl md:text-5xl mb-6">Join our community</h2>
-          <p className="text-stone-400 mb-8 max-w-lg mx-auto">
-            Over 14,000+ followers and thousands of happy customers globally. Follow our journey.
-          </p>
-          <a 
-            href="https://www.instagram.com/kashmiridesignersuits/?hl=en" 
-            target="_blank" rel="noopener noreferrer"
-            className="inline-block border border-white px-8 py-3 text-sm uppercase tracking-widest hover:bg-white hover:text-stone-900 transition-colors"
-          >
-            @kashmiridesignersuits
-          </a>
+      {/* Social Proof & Instagram Feed */}
+      <section className="py-24 bg-white border-t border-stone-200">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
+            <div className="text-center md:text-left">
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-3">#KashmiriDesignerSuits</h2>
+              <p className="text-stone-500">Over 14,000+ followers and thousands of happy customers globally.</p>
+            </div>
+            <a 
+              href="https://www.instagram.com/kashmiridesignersuits/?hl=en" 
+              target="_blank" rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 border border-stone-900 text-stone-900 px-6 py-3 text-sm font-semibold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition-colors"
+            >
+              <Instagram className="w-4 h-4" />
+              Follow Us
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            {[igFeed1, igFeed2, igFeed3, igFeed4].map((img, idx) => (
+              <a 
+                key={idx}
+                href="https://www.instagram.com/kashmiridesignersuits/?hl=en"
+                target="_blank" rel="noopener noreferrer"
+                className="group relative aspect-square overflow-hidden bg-stone-100 block"
+              >
+                <Image 
+                  src={img} 
+                  alt={`Instagram feed image ${idx + 1}`} 
+                  fill 
+                  className="object-cover group-hover:scale-105 transition-transform duration-700" 
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                  <Instagram className="w-8 h-8 text-white" />
+                </div>
+              </a>
+            ))}
+          </div>
         </div>
       </section>
 
