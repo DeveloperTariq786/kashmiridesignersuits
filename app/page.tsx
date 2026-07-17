@@ -14,6 +14,7 @@ import igFeed2 from "../src/assets/images/ig_feed_2_1784266466913.jpg";
 import igFeed3 from "../src/assets/images/ig_feed_3_1784266480853.jpg";
 import igFeed4 from "../src/assets/images/ig_feed_4_1784266491783.jpg";
 import campaignLookbook from "../src/assets/images/campaign_lookbook_1784267083945.jpg";
+import logo from "../src/assets/logo/image.png";
 
 export default function Page() {
   const whatsappNumber = "919086000130";
@@ -36,8 +37,16 @@ export default function Page() {
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-stone-50/80 backdrop-blur-md border-b border-stone-200/50">
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-          <div className="text-sm font-medium tracking-widest uppercase hidden md:block">
-            Srinagar, Kashmir
+          <div className="hidden md:flex items-center">
+            <div className="relative h-16 w-16 overflow-hidden rounded-full border border-stone-200 shadow-sm">
+              <Image
+                src={logo}
+                alt="Logo"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
           <a href="#" className="font-serif text-xl md:text-2xl font-bold tracking-tight text-stone-900">
             KASHMIRI DESIGNER SUITS <sup className="text-xs font-normal">®</sup>
