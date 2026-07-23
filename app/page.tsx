@@ -14,7 +14,7 @@ import igFeed2 from "../src/assets/images/ig_feed_2_1784266466913.jpg";
 import igFeed3 from "../src/assets/images/ig_feed_3_1784266480853.jpg";
 import igFeed4 from "../src/assets/images/ig_feed_4_1784266491783.jpg";
 import campaignLookbook from "../src/assets/images/campaign_lookbook_1784267083945.jpg";
-import logo from "../src/assets/logo/image.png";
+import logo from "../src/assets/logo/logo.jpg";
 
 export default function Page() {
   const whatsappNumber = "919086000130";
@@ -49,7 +49,7 @@ export default function Page() {
             </div>
           </div>
           <a href="#" className="font-serif text-xl md:text-2xl font-bold tracking-tight text-stone-900">
-            KASHMIRI DESIGNER SUITS <sup className="text-xs font-normal">®</sup>
+            FASHIONHUTKASHMIR <sup className="text-xs font-normal">®</sup>
           </a>
           <div className="flex items-center gap-6 text-sm font-medium tracking-wide">
             <a href="#collection" className="hover:text-stone-500 transition-colors">Collection</a>
@@ -74,10 +74,10 @@ export default function Page() {
              transition={{ duration: 0.8, delay: 0.2 }}
              className="flex items-center gap-4 mb-8"
           >
-            <div className="w-12 h-px bg-stone-900"></div>
+            {/* <div className="w-12 h-px bg-stone-900"></div>
             <span className="text-stone-900 tracking-[0.3em] uppercase text-xs font-semibold">
-              Kashmiri Designer Suits
-            </span>
+              FASHIONHUTKASHMIR
+            </span> */}
           </motion.div>
           
           <motion.h1 
@@ -132,7 +132,7 @@ export default function Page() {
           >
             <Image
               src={heroBanner}
-              alt="Kashmiri Designer Suits Campaign"
+              alt="FASHIONHUTKASHMIR Campaign"
               fill
               priority
               className="object-cover object-center"
@@ -504,11 +504,11 @@ export default function Page() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center justify-between mb-12 gap-6">
             <div className="text-center md:text-left">
-              <h2 className="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-3">#KashmiriDesignerSuits</h2>
-              <p className="text-stone-500">Over 14,000+ followers and thousands of happy customers globally.</p>
+              <h2 className="font-serif text-3xl md:text-4xl font-bold text-stone-900 mb-3">#FASHIONHUTKASHMIR</h2>
+              <p className="text-stone-500">Over 46,900+ followers and thousands of happy customers globally.</p>
             </div>
             <a 
-              href="https://www.instagram.com/kashmiridesignersuits/?hl=en" 
+              href="https://www.instagram.com/fashionhutkashmir/" 
               target="_blank" rel="noopener noreferrer"
               className="inline-flex items-center gap-2 border border-stone-900 text-stone-900 px-6 py-3 text-sm font-semibold uppercase tracking-widest hover:bg-stone-900 hover:text-white transition-colors"
             >
@@ -521,7 +521,7 @@ export default function Page() {
             {[igFeed1, igFeed2, igFeed3, igFeed4].map((img, idx) => (
               <a 
                 key={idx}
-                href="https://www.instagram.com/kashmiridesignersuits/?hl=en"
+                href="https://www.instagram.com/fashionhutkashmir/"
                 target="_blank" rel="noopener noreferrer"
                 className="group relative aspect-square overflow-hidden bg-stone-100 block"
               >
@@ -576,14 +576,14 @@ export default function Page() {
       <footer className="py-16 px-6 bg-stone-50 border-t border-stone-200">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8 text-sm">
           <div className="flex flex-col items-center md:items-start gap-2 text-center md:text-left">
-            <span className="font-serif text-xl font-bold text-stone-900">KASHMIRI DESIGNER SUITS <sup className="text-xs font-normal">®</sup></span>
+            <span className="font-serif text-xl font-bold text-stone-900">FASHIONHUTKASHMIR <sup className="text-xs font-normal">®</sup></span>
             <span className="text-stone-500">Style for every story</span>
           </div>
           
           <div className="flex flex-col md:flex-row items-center gap-6 md:gap-12 text-stone-600">
-            <a href="mailto:kashmiridesignersuits@gmail.com" className="flex items-center gap-2 hover:text-stone-900 transition-colors">
+            <a href="mailto:fashionhutkashmir@gmail.com" className="flex items-center gap-2 hover:text-stone-900 transition-colors">
               <Mail className="w-4 h-4" />
-              kashmiridesignersuits@gmail.com
+              fashionhutkashmir@gmail.com
             </a>
             <a href={createWhatsAppLink("Hi!")} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 hover:text-stone-900 transition-colors">
               <Phone className="w-4 h-4" />
@@ -592,7 +592,7 @@ export default function Page() {
           </div>
         </div>
         <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-stone-200 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-stone-400">
-          <p>© {new Date().getFullYear()} Kashmiri Designer Suits. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} FASHIONHUTKASHMIR. All rights reserved.</p>
           <p>Based in Srinagar, Kashmir. Ships Worldwide.</p>
         </div>
       </footer>

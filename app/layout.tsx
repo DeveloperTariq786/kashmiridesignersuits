@@ -13,7 +13,7 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: 'KASHMIRI DESIGNER SUITS ®',
+  title: 'FASHIONHUTKASHMIR ®',
   description: 'Style for every story',
 };
 
